@@ -10,6 +10,7 @@ pipeline {
       }
       steps {
         sh './jenkins/build.sh'
+        archiveArtifacts(artifacts: 'target/.', fingerprint: true)
       }
     }
 
